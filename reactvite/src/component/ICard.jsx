@@ -1,35 +1,23 @@
+import pic from "../images/idcard.jpg";
 
-import pic from '../images/idcard.jpg'
-function ICard() {
-  const b = "Divyam";
-  const c = 2400320100437;
-  const d = "CSE";
-
+function ICard({data}) {
   return (
-    <>
-     
-      <div 
-        style={{
-          border: "25px solid black",
-          height: "400px",
-          width: "850px"
-        }}
-      >
-      <img src={pic} height={100} width={100}></img>
-        <h1 style={{ color: "green" }}>
-          Name: {b}
-        </h1>
-        <h1 style={{ color: "blue" }}>
-          Roll no: {c}
-        </h1>
-        <h1 style={{ color: "maroon" }}>
-          Branch: {d}
-        </h1>
-        <h1 style={{ color: "gray" }}>
-          College: ABESEC
-        </h1>
-      </div>
-    </>
+    <div
+      style={{
+        border: "5px solid black",
+        height: "600px",
+        width: "800px",
+        
+      }}
+    >
+      <img src={pic} height={50} width={50}/>
+
+
+      <h1 style={{ color: "green", fontSize:"20px"}}>Name: {data.name}</h1>
+      <h1 style={{ color: "blue",fontSize:"20px" }}>Roll no: {data.roll}</h1>
+      <h1 style={{ color: "maroon",fontSize:"20px" }}>Branch: {data.branch}</h1>
+      <h1 style={{ color: "gray" ,fontSize:"20px"}}>College: {data.college}</h1>
+    </div>
   );
 }
 

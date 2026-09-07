@@ -1,13 +1,15 @@
-import ICard from "./component/ICard"
+import Gallery from "./component/Gallery";
+import Imagemanupulation from "./component/imagemanupilation";
+import ReactHook from "./component/ReactHook";
+
+
 function App() {
-
   return (
-    <div >
-<ICard></ICard>
-
-     
-    </div>
-  )
+<div >
+ {/* < Gallery/>
+  <ReactHook/> */}
+  <Imagemanupulation/>
+</div>
+  );
 }
-
-export default App
+export default App;
