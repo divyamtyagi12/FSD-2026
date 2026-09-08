@@ -1,14 +1,14 @@
 import Gallery from "./component/Gallery";
-import Imagemanupulation from "./component/imagemanupilation";
+import Imagemanipulation from "./component/Imagemanupilation";
 import ReactHook from "./component/ReactHook";
 
 
 function App() {
   return (
-<div >
+<div>
  {/* < Gallery/>
   <ReactHook/> */}
-  <Imagemanupulation/>
+  <Imagemanipulation/>
 </div>
   );
 }

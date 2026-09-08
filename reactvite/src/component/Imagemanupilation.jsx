@@ -1,10 +1,13 @@
-import react from "react";
+import React, { useState } from "react";
 import rezero from "../images/rezero.png";
-import { useState } from "react";
 
-function Imagemanupulation() {
+function Imagemanipulation() {
   const [height, setHeight] = useState(200);
   const [width, setWidth] = useState(200);
+  const [red, setRed] = useState(20);
+  const [green, setGreen] = useState(200);
+  const [blue, setBlue] = useState(140);
+  const [rotate, setRotate] = useState(0);
 
   function enhanceHeight() {
     setHeight(height + 10);
@@ -22,25 +25,35 @@ function Imagemanupulation() {
     setWidth(width - 10);
   }
 
+  function rotateImage() {
+    setRotate(rotate + 30);
+  }
+
   return (
     <div>
-      <h1 style={{ color: "white", backgroundColor: "red" }}>
-        Image Manipulation
-      </h1>
+      <h2 style={{ color: "white", backgroundColor: "brown" }}>
+        Image Manipulation using React
+    
+      </h2>
 
       <div
         style={{
-          border: "2px solid blue",
-          margin: "300px",
-          height: "400px",
-          width: "300px",
+          border: "2px solid red",
+          height: "500px",
+          width: "400px",
+          marginLeft: "300px",
         }}
       >
-        <img src={rezero} height={height} width={width} />
+        <img
+          src={rezero}
+          height={height}
+          width={width}
+          style={{ transform: `rotate(${rotate}deg)` }}
+        />
 
         <div>
-          <h2>Height: {height}</h2>
-          <h2>Width: {width}</h2>
+          <h2>Rezero height: {height}</h2>
+          <h2>Rezero width: {width}</h2>
         </div>
       </div>
 
@@ -48,9 +61,9 @@ function Imagemanupulation() {
       <button onClick={enhanceWidth}>Enhance Width</button>
       <button onClick={decreaseHeight}>Decrease Height</button>
       <button onClick={decreaseWidth}>Decrease Width</button>
+      <button onClick={rotateImage}>Rotate</button>
     </div>
   );
 }
 
-
-export default Imagemanupulation;
+export default Imagemanipulation;
